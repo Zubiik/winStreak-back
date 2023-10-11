@@ -16,14 +16,6 @@ app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
 
 app.use('/api', routes);
-//avec package similaire a code ci dessous
-// app.use((req, res, next) => {
-//   //ci dessous localhost a la place *
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   next();
-// })
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
