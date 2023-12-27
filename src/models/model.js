@@ -5,10 +5,7 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    score: {
-        required: true,
-        type: Number
-    }
+    score: [{ type: String, required: true }]
 })
 
 module.exports = mongoose.model('Data', dataSchema);
